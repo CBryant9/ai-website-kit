@@ -1,7 +1,14 @@
 # DESIGN.md — Website Design System
 
 Fill this in before asking Claude to build any UI. Every field matters.
-If you are not sure what to put, pick a brand from github.com/VoltAgent/awesome-design-md and copy their DESIGN.md instead of filling this in from scratch.
+
+**Don't know what style you want?** Don't fill this in manually — copy a proven design system instead:
+
+- *Know the vibe:* Tell Claude in a few words ("minimal and expensive", "warm earthy food brand", "dark premium tech", "bold editorial") and it will suggest which brand to copy from.
+- *Have a site you like:* Paste the URL to Claude and ask for the closest Awesome DESIGN.md match.
+- *Browse options:* github.com/VoltAgent/awesome-design-md (57 brands, free) or styles.refero.design (2000+ systems, search by mood).
+
+Once you copy a brand's DESIGN.md in, tell Claude any tweaks: "keep the fonts but warmer colours" or "same spacing but less white space".
 
 ---
 

@@ -126,6 +126,12 @@ If they give an aspiration:
 ### CTA (if missing or multiple):
 "What is the one action you want visitors to take? Pick one: book a call, sign up, download, get in touch, buy now."
 
+### Secondary selling points (always ask this, even if other context is complete):
+"What are the 2-3 other problems this website also solves? They don't all need to be as important as the main one. Think about: other painful things your customer worries about, other ways this is better than alternatives, things they might be hesitant about that this addresses. Someone reading this page should think 'wow, this solves everything I was worried about' — what are the other things on their list?"
+
+Push if they list generic benefits:
+"These are benefits, but I am looking for specific problems or worries your customer has before they buy. What specific doubt, hesitation, or fear does each of these address?"
+
 ---
 
 ## Step 4: Specificity check
@@ -170,6 +176,12 @@ Write (or rewrite) the file with everything collected:
 ## CTA
 [the one action]
 
+## Secondary selling points
+[2-3 other problems this also solves, in priority order — each must appear at least once in the copy]
+1. [Secondary pain or worry this addresses]
+2. [Secondary pain or worry this addresses]
+3. [Secondary pain or worry this addresses — or "none identified"]
+
 ## Copywriting structure
 [PAS / AIDA / Hormozi 4-box — and which angle fits best]
 ```
@@ -183,7 +195,21 @@ If BRIEF.md already existed, show what changed and why in plain language.
 Look at DESIGN.md. Is it filled in, empty, or only partially done?
 
 If empty or barely filled:
-"DESIGN.md is not filled in yet. Without it, Claude will fall back on defaults (generic fonts, grey palettes, centered layouts). Quickest fix: go to github.com/VoltAgent/awesome-design-md, pick a brand whose look you like, and paste their DESIGN.md here. Or I can walk you through filling it in field by field."
+Walk through the following:
+
+"DESIGN.md is not filled in. Without it, Claude defaults to generic fonts, grey palettes, and centered layouts. Let's fix that. Three options:
+
+*Option 1 (fastest):* Tell me the vibe in a few words. Examples: 'minimal and expensive', 'warm and earthy like a food brand', 'bold editorial like a magazine', 'dark premium tech', 'soft and friendly'. I'll suggest the closest brand match to copy from.
+
+*Option 2 (visual):* Paste me a URL of any website (yours or one you like the look of) and I'll suggest the closest match in styles.refero.design or github.com/VoltAgent/awesome-design-md.
+
+*Option 3 (manual):* I walk you through each field in DESIGN.md one at a time.
+
+Which feels right?"
+
+Once they give you a vibe or URL:
+- Suggest 2-3 specific brand names from Awesome DESIGN.md (e.g., "Notion for minimal/clean, Stripe for polished/conversion-focused, Linear for dark/premium tech, Mailchimp for warm/friendly")
+- Say: "Copy that brand's DESIGN.md into your project, then tell me any tweaks (e.g., 'keep the fonts but warmer colours' or 'more condensed and less white space')"
 
 If partially filled:
 "DESIGN.md has [list what is present] but is missing [list what is absent]. Note what is missing and fill those fields before building."
@@ -205,17 +231,18 @@ Generate and output the following block:
 ## Website context and skill routing
 
 ### When writing any copy (headlines, page text, CTAs, section copy, emails)
-1. Read BRIEF.md first — audience, pain, offer, voice, CTA
+1. Read BRIEF.md first — audience, pain, offer, voice, CTA, secondary selling points
 2. Copywriting structure: PAS (Problem → Agitate → Solution) unless another framework is specified
 3. Voice from BRIEF.md: [paste the 3 adjectives here]. No filler. No corporate speak. No AI phrases.
-4. Run /taste-skill for tone and personality
-5. Do not write copy that is not grounded in the specific audience and pain in BRIEF.md
+4. No em dashes anywhere. Not in headlines, not in body copy, not in CTAs. Rewrite the sentence instead.
+5. Cover all secondary selling points: the main pain is the hero message, but each secondary pain must appear at least once. The reader should feel 'this solves everything.'
+6. Run /impeccable first, then /taste-skill for tone and personality
+7. Do not write copy that is not grounded in the specific audience and pain in BRIEF.md
 
 ### When building any UI (pages, layouts, components, visual design)
 1. Read DESIGN.md first — follow it strictly. No visual defaults. No Inter unless DESIGN.md says so.
-2. Run /impeccable before starting any UI work
-3. Run /taste-skill after generating UI
-4. Any copy inside the UI follows the copy rules above
+2. Run /impeccable before starting. Run /taste-skill after generating. In that order.
+3. Any copy inside the UI follows the copy rules above
 
 ### When planning features or changes
 1. Check BRIEF.md: does this serve the specific audience described there?
@@ -267,6 +294,20 @@ Build the homepage first. Sections:
 4. Offer section: what they get, specifically
 5. Proof: [testimonials if present, skip if none]
 6. Final CTA
+
+Selling points coverage:
+- The main pain from BRIEF.md is the hero message and central thread
+- Every secondary selling point from BRIEF.md must appear at least once on the page
+- Before considering the homepage done, check: would someone reading this page think 'wow, this solves everything I was worried about'? If not, add what's missing.
+
+Self-review before showing anything:
+After generating each section, run this check:
+1. Run /impeccable
+2. Are all secondary selling points from BRIEF.md covered?
+3. Any AI clichés to cut? (transform, unleash, revolutionize, game-changer, empower, leverage, seamlessly, elevate, take your X to the next level) — remove every one
+4. No em dashes anywhere — rewrite any sentence that uses one
+5. Is every claim specific? No vague promises?
+If anything fails, fix it before showing the user.
 
 Do not build anything else until the homepage is approved.
 ```
