@@ -1,135 +1,141 @@
 # Council Review Skill
 
-Run this on any section or full page before presenting to the user. Five reviewers each check from their own lens. You synthesize the feedback, implement the fixes, then present the improved version — not the draft.
-
-The user never sees a draft. They see the version that passed the council.
+Run this on any section or full page before presenting to the user. Five council members each review from their own philosophy and give specific feedback in their own voice. Conflicts are debated and resolved before implementation. The user sees the final improved version — not the draft and not the meeting notes.
 
 ---
 
 ## When to run
 
-- After generating any complete section (hero, pain, solution, offer, proof, objections, CTA)
-- After generating a full page before first showing the user
-- After making any significant revision
-
-Do not present output before running this. Always.
+After generating any complete section or full page, before showing anything to the user. Always.
 
 ---
 
-## The council
+## The council members
 
-Run each reviewer in sequence. For each, state what they found (2-3 specific issues maximum — the most important ones only) and what fix is needed.
-
----
-
-### Reviewer 1: The Mom Test
-
-Lens: clarity and human language. Would someone with no industry knowledge understand this immediately? Could they explain it to a friend in one sentence?
-
-Questions to apply:
-- Is the headline immediately clear, or does it require context to parse?
-- Is there any jargon, acronym, or assumed knowledge?
-- If someone's mum read this, would she know what the business does and who it's for within 10 seconds?
-- Is anything phrased in a way that sounds like marketing rather than normal speech?
-
-Flag: anything that requires explanation, assumes knowledge, or sounds like a press release.
+Each member has a founding philosophy — the thing they care about most. They argue from that place. Their feedback is not a checklist, it is a position.
 
 ---
 
-### Reviewer 2: The Conversion Critic (Hormozi lens)
+### Member 1: The Plain-Speaker (Mom Test)
 
-Lens: does this move money? Is the offer strong enough?
+Philosophy: If you cannot explain what you do to someone's mum and have her repeat it back correctly to a friend, it is not clear enough. Clarity is the first and most important quality. A confused reader does not buy. They leave. Complexity is not sophistication — it is friction.
 
-Questions to apply:
-- Is the headline specific to a pain, or is it a vague benefit statement?
-- Is the value stack clear? Does the reader know exactly what they get and in what timeframe?
-- Is the price of NOT buying (staying stuck) framed more vividly than the price of buying?
-- Is there a proof point or mechanism that makes the outcome believable, not just claimed?
-- Is there a risk reversal (guarantee, trial, refund) and is it visible?
-- Is the CTA specific ("book a 20-minute call, no pitch") or generic ("get in touch")?
-- Are there any weasel words? (may, could, might, can help, up to) — strip them all.
+How they review: They read as someone completely outside the industry. They flag anything that requires prior knowledge, assumes context, or sounds like marketing copy instead of plain speech. They ask: "Would my mum know what to tell her friend about this business after reading this?"
 
-Flag: anything that a serious conversion copywriter would call weak, hedged, or unearned.
+They speak in direct, plain language. No hedging. "This is unclear because..." or "A normal person would not understand..." or "This line lost me."
 
 ---
 
-### Reviewer 3: The Design Taste Reviewer
+### Member 2: The Revenue Realist (Hormozi lens)
 
-Lens: does this look and feel premium, or does it look AI-made?
+Philosophy: The only reason anyone buys is value. Value is calculated: (Dream Outcome × Likelihood of Success) divided by (Time Delay × Effort Required). If any variable is weak, the offer fails regardless of how nice the copy sounds. The cost of NOT buying must feel more vivid than the price of buying. Weasel words kill conversions. Vague claims are the same as no claim.
 
-Questions to apply:
-- Does the layout follow DESIGN.md strictly, or has Claude defaulted to generic spacing/fonts?
-- Is there visual hierarchy? Can you tell in 2 seconds what is most important?
-- Does anything look like it came from a template? (centered hero with a gradient button, card grid with identical icons, section with a big emoji as the "icon")
-- Is there enough white space, or is it dense and breathless?
-- Is the typography used as designed? Correct weights, sizes, line heights?
-- Does it look like a professional made it, or like a capable but tasteless developer?
+How they review: They look at the offer, proof, risk reversal, and urgency. They challenge every claim: "What makes you say this will work? Where is the proof? What happens if it does not? Why act now and not next month?" They care about money moving, not feelings.
 
-Flag: any element that looks generic, template-like, or inconsistent with DESIGN.md.
+They speak with blunt conviction. "This headline does not earn its cost." or "This claim is unsubstantiated — anyone could say this." or "There is no reason to act now — urgency is missing."
 
 ---
 
-### Reviewer 4: The Brand Voice Auditor
+### Member 3: The Taste Maker (Design lens)
 
-Lens: does every line sound like the voice in BRIEF.md, or could it be from any business?
+Philosophy: Good design is as little design as possible. Every element must earn its presence. If something can be removed without losing meaning, remove it. Generic is not safe — it is invisible. Looking expensive is not an accident, it is a deliberate series of decisions. The most common mistake is not bad taste, it is no taste at all — the absence of a point of view.
 
-Questions to apply:
-- Read the three adjectives from BRIEF.md. Does every sentence fit all three?
-- Could a competitor copy-paste any sentence onto their homepage unchanged?
-- Are there any AI clichés? (transform, unleash, revolutionize, game-changer, empower, leverage, seamlessly, elevate) — every one is a disqualifier.
-- No em dashes. None.
-- Is the tone consistent across the whole page, or does it shift between sections?
-- Do the headlines and body copy sound like the same person wrote them?
+How they review: They look at visual hierarchy, spacing, typography, component choices, and consistency with DESIGN.md. They flag anything that looks like it came from a template, anything that is generically "professional" without a point of view, and anything that clashes with the design system.
 
-Flag: any sentence that is interchangeable, generic, or tonally inconsistent.
+They speak with aesthetic conviction. "This section has no visual identity." or "This layout is what every SaaS landing page looks like — why?" or "The spacing here is careless." or "This is inconsistent with the design system — fix it before anyone else sees it."
 
 ---
 
-### Reviewer 5: The Skeptical Customer
+### Member 4: The Voice Guardian (Brand lens)
 
-Lens: I've seen a hundred pages like this. Convince me.
+Philosophy: A brand is what people say about you when you are not in the room. Every sentence should sound like only this business could have written it. If a competitor could copy-paste any sentence onto their homepage without changing a word, the brand does not exist yet. Consistency is not enough — distinctiveness is the standard. The voice should be recognizable before anyone reads who wrote it.
 
-Questions to apply:
-- What is the first doubt that comes up after reading the hero section?
-- After reading the full page, which objections from BRIEF.md are still unanswered?
-- Is there anything that feels like a claim without proof behind it?
-- Is there a reason to act now, or can I come back to this whenever?
-- Is anything missing that a real buyer would need to feel comfortable saying yes?
+How they review: They read every sentence against the three voice adjectives in BRIEF.md. They flag anything interchangeable, any AI clichés, any em dashes, any tonal inconsistency between sections, and anything that sounds like a press release instead of a person.
 
-Flag: unanswered objections, unsubstantiated claims, missing urgency.
+They are protective and specific. "This sentence could be from any business in this space." or "The tone shifts between section 2 and section 3 — they sound like different writers." or "This cliché is banned. Rewrite." or "This line has no personality."
 
 ---
 
-## Synthesis step
+### Member 5: The Unconvinced Buyer (Skeptical Customer)
 
-After all five reviewers, list:
+Philosophy: I have seen a hundred pages like this. If you want my attention for more than three seconds, earn it. If you want my money, prove it. I am not hostile — I am tired. Tired of vague promises, tired of social proof that proves nothing, tired of "book a call" buttons that lead to a pitch. If you cannot answer my specific doubts with specific answers, I will not reach out. I will find someone who can.
 
-**Critical (fix before showing the user):** issues that would cause a real buyer to leave or not convert.
-**Important (fix now):** issues that weaken the quality but would not immediately lose a sale.
-**Minor (note for later):** small refinements worth doing but not blocking.
+How they review: They bring the real doubts a qualified buyer would have before committing. They ask: "Is this too expensive?" "Have I tried something like this before and been disappointed?" "Is this actually relevant to my specific situation?" "What is the catch?" They check whether all objections from BRIEF.md are answered directly and convincingly.
 
-Fix all Critical and Important issues immediately. Implement them. Do not just describe what should change — make the change.
-
-After implementing, do a fast second pass: did the fix introduce any new issues?
+They speak as a real human, not a critic. "My first doubt after reading the hero is..." or "I got to the proof section and I still do not believe this will work for me because..." or "The FAQ does not address the thing I actually worry about, which is..."
 
 ---
 
-## Present to the user
+## Step 1: Individual reviews
 
-Once fixes are implemented, present the updated version with a brief note:
+Run each council member in sequence. For each:
+- State their 2-3 most important findings (not a long list — only what actually matters)
+- Give a specific fix for each finding
+- Speak in their voice, not in neutral summary language
 
-"Council review complete. [N] issues fixed: [list the critical ones in one line each]. Here is the result:"
+Format:
+```
+[Member Name]: [finding] → [specific fix]
+[Member Name]: [finding] → [specific fix]
+```
+
+---
+
+## Step 2: Identify conflicts
+
+After all five have reviewed, check for direct conflicts between members.
+
+A conflict is when one member's fix directly contradicts another's. Examples:
+- Plain-Speaker says "simplify this claim" but Revenue Realist says "add more specific detail to make it believable"
+- Taste Maker says "remove this element" but Skeptical Buyer says "this is the one thing that makes me trust it"
+- Voice Guardian says "this sounds like the brand" but Plain-Speaker says "a normal person would not understand this"
+
+List each conflict clearly:
+```
+Conflict: [Member A] says X — [Member B] says Y
+```
+
+---
+
+## Step 3: Debate and resolve
+
+For each conflict, argue it out. The question is not who is right in general — it is what is right for this specific website, this specific buyer, and this specific moment in the copy.
+
+Apply these resolution principles:
+- If the conflict is about clarity vs detail: ask whether this buyer is coming cold or already knows the category. Cold buyer = Plain-Speaker usually wins. Informed buyer = Revenue Realist usually wins.
+- If the conflict is about removing vs keeping: if the element builds trust with the Skeptical Buyer, keep it. If it is decorative, the Taste Maker wins.
+- If the conflict is about voice vs conversion: the voice exists to serve the conversion, not the other way around. If a voice-consistent line actively reduces trust or clarity, revise it.
+- If genuinely 50/50: find the third option that serves both — often a middle-ground rewrite rather than choosing one side.
+
+State the resolution and why:
+```
+Resolution: [which position wins or what middle ground was found] — because [specific reason for this website/buyer]
+```
+
+---
+
+## Step 4: Implement
+
+Implement all agreed improvements. Do not implement things the council agreed to drop. Do not describe the changes — make them.
+
+After implementing, run a fast second pass: did any fix create a new problem?
+
+---
+
+## Step 5: Present to the user
+
+Show the improved content with a brief note:
+
+"Council reviewed. Fixed: [list the key improvements in one line each, grouped by theme if multiple]. Here is the result:"
 
 Then show the content.
 
-Do not show the council's comments to the user unless they ask. They want the good version, not the meeting notes.
+Do not show the council's individual comments or the debate unless the user asks. They want the good version.
 
 ---
 
 ## One-line for the CLAUDE.md routing block
 
-Add this line to the "When building any UI" and "When writing any copy" sections in your CLAUDE.md routing block:
-
 ```
-Run /council-review before presenting any output to the user.
+Run /council-review before presenting any output to the user. Conflicts between members are debated and resolved before implementation.
 ```
