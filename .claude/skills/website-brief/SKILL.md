@@ -1,6 +1,6 @@
 # Website Brief Skill
 
-Run this at the start of any website project. It transforms whatever state the project is in — messy, too broad, too long, or bare — into a tight, specific context setup that Claude can actually build from.
+Run this at the start of any website project. It transforms whatever state the project is in (messy, too broad, too long, or bare) into a tight, specific context setup that Claude can actually build from.
 
 ## What this skill produces
 
@@ -8,7 +8,7 @@ Run this at the start of any website project. It transforms whatever state the p
 2. DESIGN.md filled in (or a clear list of what is missing)
 3. A routing block to paste into the project's CLAUDE.md: rules for when to use which skills and which context docs
 
-The goal is not just a brief. The goal is a project where Claude always knows: which context to read, which skills to run, and what rules to follow — without you having to remind it each time.
+The goal is not just a brief. The goal is a project where Claude always knows which context to read, which skills to run, and what rules to follow. Without you having to remind it each time.
 
 ## The specificity standard
 
@@ -123,6 +123,9 @@ If they give an aspiration:
 ### Tone examples (if missing):
 "Paste 1-2 examples of writing that has the tone you want. Could be from anything — another website, a newsletter, an email you liked. Even one example helps a lot."
 
+### Proof (if missing or just "none"):
+"What specific results has this produced for customers? Looking for: numbers (save 5 hours a week, 3x revenue in 90 days), before/after situations, named testimonials, or a founder story that builds credibility. Even one specific result is better than none. If there is genuinely nothing yet, say so explicitly — that tells Claude to lean on offer logic instead."
+
 ### CTA (if missing or multiple):
 "What is the one action you want visitors to take? Pick one: book a call, sign up, download, get in touch, buy now."
 
@@ -131,6 +134,8 @@ If they give an aspiration:
 
 Push if they list generic benefits:
 "These are benefits, but I am looking for specific problems or worries your customer has before they buy. What specific doubt, hesitation, or fear does each of these address?"
+
+Also ask: "What are the top 2-3 objections or hesitations someone has right before they buy or book? Things like: 'too expensive', 'I tried something like this before', 'not sure this will work for my situation', 'what if I don't have time to follow through.' The objections are often more important than the secondary benefits — each one needs a direct answer on the page."
 
 ---
 
@@ -177,13 +182,19 @@ Write (or rewrite) the file with everything collected:
 [the one action]
 
 ## Secondary selling points
-[2-3 other problems this also solves, in priority order — each must appear at least once in the copy]
-1. [Secondary pain or worry this addresses]
-2. [Secondary pain or worry this addresses]
-3. [Secondary pain or worry this addresses — or "none identified"]
+[Other problems this also solves — assign each to a section on the page, not just a one-line mention]
+1. [Secondary pain] — appears in: [section name e.g. "objections block" or "feature detail"]
+2. [Secondary pain] — appears in: [section name]
+3. [Secondary pain] — appears in: [section name]
+
+## Objections
+[Top hesitations before buying and the direct answer to each]
+1. Objection: [what they worry about] — Answer: [specific response]
+2. Objection: [what they worry about] — Answer: [specific response]
+3. Objection: [what they worry about] — Answer: [specific response]
 
 ## Copywriting structure
-[PAS / AIDA / Hormozi 4-box — and which angle fits best]
+[PAS / AIDA / Hormozi 4-box — and which angle fits best for this specific business]
 ```
 
 If BRIEF.md already existed, show what changed and why in plain language.
@@ -221,7 +232,7 @@ If complete:
 
 ## Step 7: Write the CLAUDE.md routing block
 
-This is the block the user adds to their existing project CLAUDE.md. It tells Claude which skills to use and which context docs to read at each moment — so they never have to remind it.
+This is the block the user adds to their existing project CLAUDE.md. It tells Claude which skills to use and which context docs to read at each moment, so they never have to remind it.
 
 Generate and output the following block:
 
@@ -282,31 +293,30 @@ Before writing any code:
 4. Read DESIGN.md — apply it strictly, no visual defaults
 5. Read CLAUDE.md — follow all routing rules there
 
-Copywriting structure: PAS
-- Problem: speak directly to the pain in BRIEF.md
-- Agitate: what life looks like if they stay stuck
-- Solution: what changes with this business, what they get specifically
+Copywriting structure: use the framework chosen in BRIEF.md (PAS / AIDA / Hormozi 4-box). Apply it through every section, not just the hero.
 
-Build the homepage first. Sections:
+Build the homepage first. Sections in order:
 1. Hero: one headline naming the problem. One CTA button.
-2. Pain section: expand on the stuck feeling in the customer's language
+2. Pain section: expand on the stuck feeling in the customer's words
 3. Solution section: what changes
-4. Offer section: what they get, specifically
-5. Proof: [testimonials if present, skip if none]
-6. Final CTA
+4. Offer section: what they get, specifically, in what timeframe
+5. Proof: testimonials, numbers, before/afters from BRIEF.md. If no proof, use offer logic and founder credibility. Do not skip this section.
+6. Objections / FAQ: 2-3 specific hesitations from BRIEF.md with direct answers. This is where secondary selling points live — each one assigned to an objection, not floating.
+7. Final CTA
 
 Selling points coverage:
-- The main pain from BRIEF.md is the hero message and central thread
-- Every secondary selling point from BRIEF.md must appear at least once on the page
-- Before considering the homepage done, check: would someone reading this page think 'wow, this solves everything I was worried about'? If not, add what's missing.
+- The main pain is the hero message and central thread
+- Each secondary selling point from BRIEF.md is assigned to a section — the objections block, a feature detail, or a proof caption. Not a one-liner tacked on at the end.
+- Before finishing, ask: would someone reading this whole page think 'wow, this solves everything I was worried about'? If not, find what's missing and add it.
 
 Self-review before showing anything:
-After generating each section, run this check:
+After generating each section, run these tests:
 1. Run /impeccable
-2. Are all secondary selling points from BRIEF.md covered?
-3. Any AI clichés to cut? (transform, unleash, revolutionize, game-changer, empower, leverage, seamlessly, elevate, take your X to the next level) — remove every one
-4. No em dashes anywhere — rewrite any sentence that uses one
-5. Is every claim specific? No vague promises?
+2. Competitor test: could a competitor paste this sentence unchanged onto their homepage? If yes, rewrite it to be specific to this business.
+3. Specificity test: does every claim contain a number, name, or timeframe? If not, make it specific or cut it.
+4. AI clichés cut: (transform, unleash, revolutionize, game-changer, empower, leverage, seamlessly, elevate, take your X to the next level) — remove every one.
+5. No em dashes. Rewrite any sentence that uses one.
+6. Objections check: are the specific hesitations from BRIEF.md answered directly, not just hinted at?
 If anything fails, fix it before showing the user.
 
 Do not build anything else until the homepage is approved.
