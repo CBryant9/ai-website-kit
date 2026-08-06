@@ -1,62 +1,78 @@
 # Website Builder Kit
 
-This project is set up to help you build a high-quality, persuasive website with Claude Code.
+This kit gives Claude Code everything it needs to build a high-quality, persuasive website.
 
-## Before you touch any code
+---
 
-Run the brief skill first. Every time. Without a complete, specific brief, Claude will default to generic.
+## If this is a fresh project (no existing CLAUDE.md)
+
+Everything is already set up. Start here:
+
+Say: "Run the website brief" or "Let's start the website process."
+
+Claude will read any context you have, identify gaps, and interview you to fill them before any code is written.
+
+---
+
+## If you are adding this to an existing project that already has a CLAUDE.md
+
+Add this block to your existing CLAUDE.md (anywhere near the top):
 
 ```
-Run .claude/skills/website-brief/SKILL.md
+## Website context
+
+When doing any website work — design decisions, copy, building pages, planning features, or reviewing existing work:
+1. Read WEBSITE-CONTEXT.md in this project first. Follow all design and brief rules there.
+2. Run the website brief skill if context is missing or vague: .claude/skills/website-brief/SKILL.md
+3. Do not make visual or copy decisions without checking against WEBSITE-CONTEXT.md.
 ```
 
-Or just say: "Let's start the website process" or "Run the website brief."
+Then rename this kit's CLAUDE.md to WEBSITE-CONTEXT.md.
 
-Claude will interview you, push back on anything too broad, and produce a tight brief before any building begins.
+That's it. Your existing CLAUDE.md now routes to the kit when doing website work.
 
-## The standard this kit enforces
+---
 
-You must be able to describe: one specific person, with one specific painful problem, who wants one specific outcome.
+## Before building anything
 
-Not "business owners who want to grow." That is not specific enough.
-Specific: "solo consultants who lose clients to bigger agencies because they can't produce a professional proposal fast enough."
+The brief skill runs first. Always.
 
-The brief skill will not let you move on until you get there.
+Say: "Run the website brief" and Claude will:
+1. Read any existing context in the project (CLAUDE.md, notes, planning docs, README)
+2. Identify what is missing or too vague
+3. Suggest how to improve what is already there
+4. Ask targeted questions for each gap
+5. Push back until the context is specific enough to build from
+6. Write BRIEF.md and generate the build prompt
 
-## Skills installed in this kit
+---
 
-- website-brief: the context interview (run this first, always)
-
-## Skills to install before building
-
-Run these in Claude Code before you start generating any UI:
+## Skills to install before writing any UI
 
 ```
 npx skills add impeccable
-```
-- Impeccable: catches AI slop (generic gradients, Inter font everywhere, default shadows). Run at the start of every session.
-
-```
 npx skills add taste-skill
-```
-- taste-skill: injects design personality (variance, motion, density dials). Run after Impeccable.
-
-```
 npx skills add kostja94/marketing-skills
 ```
-- Landing page copy, SEO, page structure skills.
+
+Install these once, in order. Then tell Claude: "Install skills before building."
+
+---
 
 ## Design reference
 
-Fill in DESIGN.md before prompting Claude to build anything visual.
+Fill in DESIGN.md before any visual work.
 
-Options:
-- Copy a design system from github.com/VoltAgent/awesome-design-md (57 brands, free)
-- Browse styles.refero.design for 2000+ design systems by mood
-- Use SkillUI to extract the system from a site you love
+Fastest route: pick a brand from github.com/VoltAgent/awesome-design-md, copy their DESIGN.md into this project. 57 brands, free.
 
-Tell Claude: "Strictly follow DESIGN.md for all visual decisions."
+More options: styles.refero.design (2000+ systems, search by mood, vibe, or URL).
 
-## Once brief and design are ready
+Once DESIGN.md is filled in, tell Claude: "Strictly follow DESIGN.md for all visual decisions."
 
-Tell Claude: "Build the homepage using the brief in BRIEF.md and the design system in DESIGN.md. Use PAS copywriting structure. Install Impeccable and taste-skill first."
+---
+
+## The build command
+
+Once BRIEF.md and DESIGN.md are ready:
+
+"Build the homepage using BRIEF.md for all copy and audience context, and DESIGN.md for all visual decisions. Install Impeccable and taste-skill first. Use PAS copywriting structure."

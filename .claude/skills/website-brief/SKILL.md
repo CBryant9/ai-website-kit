@@ -1,102 +1,125 @@
 # Website Brief Skill
 
-Run this before any design or code work. The website will be as specific as your brief. A vague brief produces a generic website, every time.
+Run this before any design or code work. A vague brief produces a generic website, every time.
 
 ## What this skill does
 
-1. Reads any context you have already written (look for BRIEF.md, any notes, anything about the business or audience)
-2. Checks it against the specificity standard
-3. Asks targeted questions for anything missing or too vague
-4. Actively pushes back until you hit the standard
-5. Writes a complete BRIEF.md
-6. Generates the build prompt
+1. Reads all existing context in the project
+2. Analyzes what is good, what is missing, what is too vague
+3. Suggests concrete improvements to existing content
+4. Asks targeted questions for each gap (one at a time)
+5. Pushes back until the specificity standard is met
+6. Writes or updates BRIEF.md
+7. Generates the build prompt
 
 ## The specificity standard
 
 Before building starts, you must be able to fill in this sentence:
 
-"This website is for [one specific type of person] who is currently [one specific painful feeling or situation], and they come here because they want [one specific outcome]."
+"This website is for [one specific type of person] who is currently [one specific painful situation], and they come here because they want [one specific outcome]."
 
-Not: "business owners who want to grow."
-That is not specific enough.
+Not "business owners who want to grow." That is not specific enough.
 
-Good: "solo consultants who lose clients to bigger agencies because when a prospect asks for a proposal, they take three days to produce one that looks amateur — and by then the client has moved on."
+Good: "solo consultants who lose clients to bigger agencies because when a prospect asks for a proposal, it takes them three days to produce something that looks amateur — and by then the client has moved on."
 
 The website speaks to that person. Not everyone.
 
-## Step 1: Read existing context
+---
 
-Look for:
-- BRIEF.md (if it exists, read it)
-- Any .md files with notes about the business, audience, or offer
-- Anything in the project that describes what this website is for
+## Step 0: Read existing project context
 
-If nothing exists yet, that is fine — start fresh.
+Before asking anything, read every relevant file in the project. Look for:
 
-## Step 2: Run the context analysis
+- CLAUDE.md or WEBSITE-CONTEXT.md: what instructions already exist?
+- BRIEF.md: is there already a brief? What does it say?
+- README.md: what does this project say it is?
+- Any .md files that look like notes, planning docs, research, or audience descriptions
+- package.json, site.config.js, or similar: project name, description
+- Any existing copy in the codebase (hero text, about sections, homepage copy)
 
-Check what you have (or don't have) against this list. Note what is missing or too vague:
+Read all of these before proceeding.
 
-- [ ] Business: what does this business actually do, in one sentence?
-- [ ] Audience: who specifically is the customer? (not a broad category — a specific type of person in a specific situation)
-- [ ] Main pain: what is the ONE thing they feel stuck on or embarrassed about right now?
-- [ ] Desired outcome: what do they actually want to feel or have after working with this business?
-- [ ] The offer: what specifically does the customer get?
-- [ ] Proof: any results, testimonials, or social proof that shows it works?
-- [ ] Voice: how does this business sound? (3 adjectives)
-- [ ] Tone examples: any examples of writing with the right tone?
-- [ ] CTA: what is the ONE action the website wants the visitor to take?
-- [ ] Design direction: minimal/bold/editorial/warm/clean? (fill in DESIGN.md)
+---
 
-## Step 3: Interview — ask for what is missing
+## Step 1: Context analysis
 
-For each gap, ask ONE question at a time. Wait for the answer before asking the next.
+After reading the project, produce a clear audit against this checklist:
 
-Do not ask multiple questions at once. One at a time.
+| Item | Status | Notes |
+|------|--------|-------|
+| Business: what it does in 1 sentence | present / missing / too vague | |
+| Audience: specific person in specific situation | present / missing / too broad | |
+| Main pain: the ONE thing they feel stuck on | present / missing / too abstract | |
+| Desired outcome: what they want to feel or have | present / missing / too vague | |
+| The offer: what specifically the customer gets | present / missing / unclear | |
+| Proof: results, testimonials, case studies | present / missing | |
+| Voice: 3 adjectives for how the brand sounds | present / missing | |
+| Tone examples: writing samples with the right tone | present / missing | |
+| CTA: the one action the website wants visitors to take | present / missing / multiple (pick one) | |
+| Design direction: visual vibe description | present / missing / too generic | |
 
-### Audience question (if missing or too broad):
-"Who is the most likely person to hire / buy from this business? Describe one specific type of person — their job, their situation, what they are struggling with right now. Not a category like 'business owners' — describe the actual human."
+Present this table to the user. Be specific about what is good and what needs work. For anything marked "too vague" or "too broad," show exactly why — quote the vague part.
+
+Example: "Your audience says 'women entrepreneurs' — this is too broad. Which type? What situation are they in right now?"
+
+---
+
+## Step 2: Improvement suggestions
+
+For anything that exists but is too vague, suggest a concrete improvement before asking.
+
+Example:
+"Your current pain statement says 'they struggle to get clients.' Here's a more specific version: 'they know they are good at what they do but keep losing clients to people who look more polished or established online.' Does that resonate, or is the real pain something different?"
+
+Let them react to the suggestion rather than starting from scratch. If they confirm or refine it, use their version.
+
+---
+
+## Step 3: Fill the gaps (one question at a time)
+
+For anything still missing after Step 2, ask one question at a time. Wait for the answer before asking the next.
+
+### Audience (if still missing or too broad after Step 2):
+"Who is the most likely person to hire or buy from this business? Describe one specific type of person — their situation, what they are dealing with right now. Not a category like 'business owners' or 'entrepreneurs' — describe the actual human."
 
 If they give a broad answer, push back:
-"That is still quite broad. Let's get more specific. Of all the people who might buy from this business, who would benefit most? What specific situation are they in right now that makes them need this?"
+"That is still quite broad. Of all the people who might buy from this, who would benefit most? What specific situation are they in that makes them need this right now?"
 
-Keep pushing until it describes one person in one situation. Do not accept "people who want X" as an answer.
+Keep asking until it describes one person in one situation. Do not accept categories as answers.
 
-### Main pain question (if missing or too vague):
-"What is the most painful thing this person feels right now — before they find this business? Not what they want to achieve. The thing they feel embarrassed about, frustrated by, or stuck on. In their words, not marketing language."
+### Main pain (if missing or too vague):
+"What is the most painful thing this person feels right now, before they find this business? Not what they want to achieve — the thing they feel embarrassed about, frustrated by, or stuck on today. In their words, not marketing language."
 
-If they give an aspiration (what the customer wants), redirect:
-"That's the outcome they want — I want the pain they feel right now, before they found this. What situation makes them feel stuck or like they're failing?"
+If they give an aspiration (what the customer wants to achieve):
+"That is the outcome they want. I am looking for the pain they feel right now, before they found this. What situation makes them feel like they are falling behind or getting it wrong?"
 
-### Offer question (if missing or too vague):
-"What specifically does the customer get? Not the result — the actual thing. What do they receive, and in what timeframe?"
+### Offer (if missing or unclear):
+"What specifically does the customer get? Not the result — the actual deliverable. What do they receive, and in what timeframe?"
 
-### Proof question (if missing):
-"Do you have any results, case studies, or testimonials? Even rough numbers or one example story is useful."
+### Voice (if missing):
+"How should this website sound? Give me 3 adjectives. Examples: direct, warm, non-corporate / calm, expert, kind / bold, honest, no-fluff."
 
-If they don't have any:
-"That's fine. We'll keep the proof section minimal and focus on the logic of the offer instead."
+### Tone examples (if missing):
+"Paste 2-3 examples of writing that has the tone you want. Could be from any source — another website, a newsletter, a book. Even one example helps a lot."
 
-### Voice question (if missing):
-"How should this website sound? Give me 3 adjectives. Examples: direct and warm and non-corporate / calm and expert and kind / bold and honest and no-fluff."
+### CTA (if missing or multiple):
+"What is the ONE action you want the visitor to take on this website? Pick one: book a call, sign up, download something, get in touch, buy now."
 
-### CTA question (if missing):
-"What is the ONE action you want the visitor to take on this website? Book a call, sign up for a free trial, download something, contact you? Pick one."
+---
 
 ## Step 4: Specificity check
 
-Before writing the brief, run this check:
+Before writing the brief, verify this sentence works:
 
-Read back the audience + pain description you have collected. Can you fill in this sentence clearly?
+"This website is for [audience] who is currently [pain], and they come here because they want [outcome]."
 
-"This website is for [person] who is currently [feeling/situation], and they come here because they want [outcome]."
+If any part is still vague, go back to Step 3 for that item.
 
-If yes: continue.
-If no: go back to Step 3 and ask more targeted questions. Do not proceed until this sentence is clear.
+---
 
-## Step 5: Write BRIEF.md
+## Step 5: Write or update BRIEF.md
 
-Once all questions are answered and the specificity check passes, write the file:
+Write (or rewrite) the file with everything collected:
 
 ```markdown
 # Website Brief
@@ -105,10 +128,10 @@ Once all questions are answered and the specificity check passes, write the file
 [what the business does in 1 sentence]
 
 ## The customer
-[specific person in specific situation — the full description from the interview]
+[specific person — description, situation, context]
 
 ## Main pain
-[the thing they feel right now, in their words]
+[the thing they feel right now, as specifically as possible, in their words]
 
 ## Desired outcome
 [what they want to feel or have after working with this business]
@@ -117,56 +140,57 @@ Once all questions are answered and the specificity check passes, write the file
 [what the customer gets, specifically]
 
 ## Proof
-[results, testimonials, or case studies — or "none yet"]
+[results, testimonials, case studies — or "none yet: focus on offer logic"]
 
 ## Voice
 [3 adjectives]
-[2-3 examples of writing with the right tone, pasted in]
+[paste tone examples here]
 
 ## CTA
-[the one action you want them to take]
+[the one action]
 
 ## Copywriting angle
-[which framework fits best: PAS / AIDA / Hormozi 4-box + which quadrant]
+[PAS / AIDA / Hormozi 4-box: which quadrant fits best — more good / less bad / more bad if no action / less good if no action]
 ```
 
-Write this to BRIEF.md in the project root.
+If a BRIEF.md already existed, show a diff of what changed and why.
+
+---
 
 ## Step 6: Generate the build prompt
 
-Once BRIEF.md is written, generate and output this prompt for the user to copy-paste into Claude Code:
+Once BRIEF.md is written, output this prompt for the user to paste into Claude Code:
 
 ---
 
 ```
-You are building a website for [business name].
-
-Read BRIEF.md for the complete context. Read DESIGN.md for the visual system.
+You are building a website. All context is in this project.
 
 Before writing any code:
-1. Run /impeccable to install the anti-slop rules
-2. Run /taste-skill to inject design personality
-3. Read BRIEF.md — understand the customer, their pain, and the offer
-4. Read DESIGN.md — apply it strictly, no defaults
+1. Run /impeccable — installs anti-slop rules
+2. Run /taste-skill — injects design personality
+3. Read BRIEF.md — the audience, pain, offer, voice, and CTA
+4. Read DESIGN.md — apply it strictly, no visual defaults
+5. Read WEBSITE-CONTEXT.md (or CLAUDE.md) — follow all instructions there
 
-Copywriting structure: use PAS (Problem, Agitate, Solution) for the hero and main sections.
-- Problem: speak directly to [main pain from brief]
-- Agitate: what happens if they stay stuck
-- Solution: introduce the offer, show the outcome
+Copywriting structure: PAS (Problem, Agitate, Solution)
+- Problem section: speak directly to [paste main pain from brief]
+- Agitate: what life looks like if they stay stuck
+- Solution: what changes with this business, what they get
 
-Voice: [3 adjectives from brief]. No filler words. No corporate speak. No AI phrases like "unleash your potential" or "transform your business."
+Voice: [paste 3 adjectives]. No filler. No corporate speak. No phrases like "unleash your potential" or "transform your business." Write like a person.
 
 Build the homepage first. Sections in order:
-1. Hero: headline that names the problem + CTA
-2. Pain section: expand on what it feels like to be stuck
-3. Solution section: what changes with this business
-4. Offer section: what they get specifically
-5. Proof: [testimonials/results or skip if none]
+1. Hero: one headline that names the problem. One CTA.
+2. Pain section: expand on the stuck feeling
+3. Solution section: what changes
+4. Offer section: what they get, specifically
+5. Proof: [testimonials or skip if none]
 6. Final CTA
 
-Do not build anything else until the homepage is reviewed and approved.
+Do not build anything else until the homepage is approved.
 ```
 
 ---
 
-Tell the user: "Your brief is ready in BRIEF.md and your build prompt is above. Copy the prompt into Claude Code with Claude Code open in this project folder to start building."
+Tell the user: "Brief is ready in BRIEF.md. Paste the prompt above into Claude Code with this project open to start building."
