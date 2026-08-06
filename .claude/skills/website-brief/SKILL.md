@@ -82,6 +82,8 @@ Then say: "For each one, confirm if this is right, refine it, or tell me if I mi
 
 Go through each field. For anything that is still too vague after they confirm, apply the specificity push from Step 3.
 
+Once fields are confirmed, also ask the Secondary selling points and Objections questions from Step 3 — these are always asked regardless of which path was taken.
+
 Keep the original long document as is. BRIEF.md will be the new refined version. Tell the user: "Your original context stays in place — I'll write BRIEF.md as the refined version. Your CLAUDE.md routing will point to BRIEF.md so Claude reads the tight version, not the long one."
 
 ---
@@ -242,13 +244,13 @@ Generate and output the following block:
 ## Website context and skill routing
 
 ### When writing any copy (headlines, page text, CTAs, section copy, emails)
-1. Read BRIEF.md first — audience, pain, offer, voice, CTA, secondary selling points
-2. Copywriting structure: PAS (Problem → Agitate → Solution) unless another framework is specified
+1. Read BRIEF.md first — audience, pain, offer, voice, CTA, secondary selling points, objections
+2. Copywriting structure: PAS (Problem → Agitate → Solution) unless BRIEF.md specifies another framework
 3. Voice from BRIEF.md: [paste the 3 adjectives here]. No filler. No corporate speak. No AI phrases.
 4. No em dashes anywhere. Not in headlines, not in body copy, not in CTAs. Rewrite the sentence instead.
-5. Cover all secondary selling points: the main pain is the hero message, but each secondary pain must appear at least once. The reader should feel 'this solves everything.'
-6. Run /impeccable first, then /taste-skill for tone and personality
-7. Do not write copy that is not grounded in the specific audience and pain in BRIEF.md
+5. Cover all secondary selling points and answer all objections from BRIEF.md. Reader should feel 'this solves everything I was worried about.'
+6. Run /impeccable first, then /kostja94/marketing-skills for section-level structure, then /taste-skill for tone
+7. Do not write copy not grounded in the specific audience and pain in BRIEF.md
 
 ### When building any UI (pages, layouts, components, visual design)
 1. Read DESIGN.md first — follow it strictly. No visual defaults. No Inter unless DESIGN.md says so.
@@ -310,14 +312,23 @@ Selling points coverage:
 - Before finishing, ask: would someone reading this whole page think 'wow, this solves everything I was worried about'? If not, find what's missing and add it.
 
 Self-review before showing anything:
-After generating each section, run these tests:
+After generating each section, run these tests in order:
+
 1. Run /impeccable
 2. Competitor test: could a competitor paste this sentence unchanged onto their homepage? If yes, rewrite it to be specific to this business.
 3. Specificity test: does every claim contain a number, name, or timeframe? If not, make it specific or cut it.
 4. AI clichés cut: (transform, unleash, revolutionize, game-changer, empower, leverage, seamlessly, elevate, take your X to the next level) — remove every one.
 5. No em dashes. Rewrite any sentence that uses one.
 6. Objections check: are the specific hesitations from BRIEF.md answered directly, not just hinted at?
-If anything fails, fix it before showing the user.
+
+Value equation check (Hormozi lens) — run this on the full page before showing the user:
+- Dream outcome: is it stated in the words the customer would actually use, not a polished version?
+- Likelihood of success: is there proof, a guarantee, or a clear mechanism that makes the outcome believable?
+- Time to result: does the page tell them how quickly they will see a difference?
+- Effort required: is it clear this is easy or handled for them? Are the common effort objections addressed?
+- Risk reversal: is there a guarantee, trial, or refund policy? If there is one, is it visible?
+- Price vs. cost: does the page frame the cost of NOT buying (staying stuck) more vividly than the price?
+If any of these fail, fix it before showing the user.
 
 Do not build anything else until the homepage is approved.
 ```

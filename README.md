@@ -43,3 +43,11 @@ The brief skill enforces this before building starts:
 "This website is for [one specific person] who is currently [one specific painful situation], and they come here because they want [one specific outcome]."
 
 Generic context = generic website. The skill will keep asking until you get specific.
+
+## Which model to use
+
+- **Building (code, layouts, components):** Sonnet is fine. Fast and capable.
+- **Writing copy (hero headline, pain section, offer section):** Use Fable. Better at maintaining consistent tone over long-form content and avoids slipping into generic AI voice.
+- **Reviewing copy after build:** Run /impeccable and /taste-skill first. Then ask Fable to "read this page as a skeptical customer and tell me what doesn't land."
+
+The single biggest cause of bad results is vague context, not model choice. A well-briefed Sonnet produces better copy than an unbriefed Fable.
