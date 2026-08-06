@@ -250,12 +250,14 @@ Generate and output the following block:
 4. No em dashes anywhere. Not in headlines, not in body copy, not in CTAs. Rewrite the sentence instead.
 5. Cover all secondary selling points and answer all objections from BRIEF.md. Reader should feel 'this solves everything I was worried about.'
 6. Run /impeccable first, then /kostja94/marketing-skills for section-level structure, then /taste-skill for tone
-7. Do not write copy not grounded in the specific audience and pain in BRIEF.md
+7. Run /council-review before presenting any copy to the user
+8. Do not write copy not grounded in the specific audience and pain in BRIEF.md
 
 ### When building any UI (pages, layouts, components, visual design)
 1. Read DESIGN.md first — follow it strictly. No visual defaults. No Inter unless DESIGN.md says so.
 2. Run /impeccable before starting. Run /taste-skill after generating. In that order.
 3. Any copy inside the UI follows the copy rules above
+4. Run /council-review before presenting anything to the user
 
 ### When planning features or changes
 1. Check BRIEF.md: does this serve the specific audience described there?
@@ -329,6 +331,9 @@ Value equation check (Hormozi lens) — run this on the full page before showing
 - Risk reversal: is there a guarantee, trial, or refund policy? If there is one, is it visible?
 - Price vs. cost: does the page frame the cost of NOT buying (staying stuck) more vividly than the price?
 If any of these fail, fix it before showing the user.
+
+Council review (mandatory before presenting anything):
+After generating each section and before showing the user, run /council-review. Five reviewers: Mom Test (clarity), Conversion Critic (offer strength, Hormozi lens), Design Taste (premium or AI-made?), Brand Voice Auditor (every line sounds like the brief), Skeptical Customer (unanswered objections). Fix all critical and important issues. Present the improved version, not the draft.
 
 Do not build anything else until the homepage is approved.
 ```
